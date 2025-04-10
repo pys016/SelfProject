@@ -9,13 +9,16 @@ public class ParkingVO {
 	private Date entry_log;
 	private Date exit_log;
 	private String status;
+	private double parking_fee;
+	
 	
 	public ParkingVO() {
 		super();
 	}
 
+
 	public ParkingVO(int parking_id, String car_number, String park_area, Date entry_log, Date exit_log,
-			String status) {
+			String status, Double parking_fee) {
 		super();
 		this.parking_id = parking_id;
 		this.car_number = car_number;
@@ -23,6 +26,7 @@ public class ParkingVO {
 		this.entry_log = entry_log;
 		this.exit_log = exit_log;
 		this.status = status;
+		this.parking_fee = parking_fee;
 	}
 
 	public int getParking_id() {
@@ -73,5 +77,12 @@ public class ParkingVO {
 		this.status = status;
 	}
 	
+	public double getParking_fee() {
+		return parking_fee;
+	}
+
+	public void setParking_fee(double parking_fee) {
+		this.parking_fee = parking_fee;
+	}
 	
 }

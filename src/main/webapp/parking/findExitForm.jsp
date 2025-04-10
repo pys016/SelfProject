@@ -12,7 +12,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>입차등록</title>
+<title>출차 차량 조회</title>
 <link rel="stylesheet"  type="text/css" href="${pageContext.request.contextPath }/css/style.css">
 </head>
 <body>
@@ -23,25 +23,16 @@
         <a href="${contextPath}/parkingLot/findExitForm.do">출차 등록</a>
     </div>
     
-<c:if test="${not empty msg }">
-	<script>
-		alert('${msg}');
-	</script>
-</c:if>
-	<form method="post" action="${contextPath }/parkingLot/addEntry.do">
-		<h1 style="text-align:center">입차 등록</h1>
+	<h1 style="text-align:center">출차 차량 조회</h1>
+	<form method="post" action="${contextPath }/parkingLot/findCar.do">
 		<table border="1" align="center">
 			<tr>
-				<td>차량넘버</td>
+				<td>차량번호</td>
 				<td><input type="text" name="car_number" required></td>
 			</tr>
 			<tr>
-				<td>주차장소</td>
-				<td><input type="text" name="park_area" required></td>
-			</tr>
-			<tr>
 				<td colspan="2" align="center">
-					<input type="submit" value="입차등록"> &nbsp;
+					<input type="submit" value="차량 조회"> &nbsp;
 					<input type="reset" value="다시쓰기">
 				</td>
 			</tr>
